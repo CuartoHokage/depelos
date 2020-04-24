@@ -6,13 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hola amigos mios!!!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
 
+        <Button
+            android:text="PLAY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonPlay"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/buttonPause"
+            android:layout_toStartOf="@+id/buttonPause"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:text="PAUSE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonPause"
+            android:layout_alignBaseline="@+id/buttonPlay"
+            android:layout_alignBottom="@+id/buttonPlay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"/>
+
+
+        <Button
+            android:text="STOP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonStop"
+            android:layout_alignBaseline="@+id/buttonPause"
+            android:layout_alignBottom="@+id/buttonPause"
+            android:layout_toEndOf="@+id/buttonPause"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"/>
+        <VideoView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/VideoView"
+            />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
